@@ -13,7 +13,7 @@ Execute ``` bash checkStatus.sh ``` to check if
 - password: ```ass```
 - ```sudo ufw allow 20```
 - ```ls | nc -l -p 20```
-/n/# this is to listen to port 20 and so that nmap can ping the open port 20 
+this is to listen to port 20 and so that nmap can ping the open port 20 
 
 ### Some expected results:
 ```
