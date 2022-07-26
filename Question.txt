@@ -1,0 +1,72 @@
+Introduction
+Scripting exercise 1:
+
+
+
+Part 1:
+
+Write a script that check the status of a list of computers (given by IP address).
+
+The list of IPs should be given by a data file
+
+The status should report if the computers respond to:
+
+a) ping
+
+b) ftp (port 20)
+
+c) ssh (port 22)
+
+d) http request on port 80
+
+
+
+Example (command and suggested output):
+
+
+
+$ ./checkstatus.sh computerlist.txt
+
+
+
+167.192.2.234 PING: ok, http: no-response, ssh: ok
+
+
+
+Part 2:
+
+Fix so that the script runs once every X minutes to check for a list of servers that should respond to port 80, and when the server change state (from responding to not responding), the script should trigger another "email notification script" that is sending an email.
+
+
+
+Note: the email script should simply print a message on the screen and not send an actual email (as we have no SMTP server to connect to for delivery of the email)
+
+
+
+
+
+Scripting exercise 2:
+
+
+
+Develop a script that compare timestamp of all files in two folders (and their sub-folders) and list out the files that differ in their time-stamp
+
+(this exercise should use shall commands related to file information and not use the diff command)
+
+
+
+Example (command and suggested output):
+
+
+
+$ ./checkfiledates.sh foldername1 foldername
+
+
+
+Folder1 Times Folder2 Times SubFolderFileName
+
+2021-11-01 12:00:00 2121-11-02 13:00:00 /finename.ext
+
+- 2121-11-02 11:11:11 /subfolder1/anotherfilename.ext
+
+2021-11-01 12:00:00 - /subfolder2/somefilename.ext
